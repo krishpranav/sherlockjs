@@ -15,4 +15,20 @@
 
     process.on('uncaughtException', errorAndDie);
     process.on('unhandledRejection', errorAndDie);
+
+    const args = arg({
+		'--help': Boolean,
+		'--version': Boolean,
+		'--name': String,
+		'--only-found': Boolean,
+		'--json': Boolean,
+		'--csv': Boolean,
+		'--pretty-json': Boolean,
+
+		'-v': '--version',
+		'-n': '--name',
+		'-f': '--only-found',
+		'-j': '--json',
+		'-c': '--csv'
+	});
 })
