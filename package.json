@@ -6,39 +6,39 @@
     "main": "index.js",
     "bin": "index.js",
     "scripts": {
-      "start": "node index.js",
-      "build": "pkg package.json -o sherlockjs",
-      "build-all": "pkg -t latest-linux-x64,latest-macos-x64,latest-win-x64 package.json --out-path dist/",
-      "build-ci": "pkg -d -t host package.json --out-path dist/",
-      "lint": "xo",
-      "test": "./sherlockjs -cfn krishpranav"
+        "start": "node index.js",
+        "build": "pkg package.json -o sherlockjs",
+        "build-all": "pkg -t latest-linux-x64,latest-macos-x64,latest-win-x64 package.json --out-path dist/",
+        "build-ci": "pkg -d -t host package.json --out-path dist/",
+        "lint": "xo",
+        "test": "./sherlockjs -cfn krishpranav"
     },
     "pkg": {
-      "assets": [
-        "services.json"
-      ]
+        "assets": [
+            "services.json"
+        ]
     },
     "xo": {
-      "rules": {
-        "unicorn/no-process-exit": 0
-      }
+        "rules": {
+            "unicorn/no-process-exit": 0
+        }
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/krishpranav/sherlockjs.git"
+        "type": "git",
+        "url": "git+https://github.com/krishpranav/sherlockjs.git"
     },
     "author": "Squared <squared@codebrew.fr> (https://squared.codebrew.fr)",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/krishpranav/sherlockjs/issues"
+        "url": "https://github.com/krishpranav/sherlockjs/issues"
     },
     "homepage": "https://github.com/krishpranav/sherlockjs#readme",
     "dependencies": {
-      "arg": "^4.1.1",
-      "chalk": "^2.4.2"
+        "arg": "^4.1.1",
+        "chalk": "^2.4.2"
     },
     "devDependencies": {
-      "pkg": "^4.4.0",
-      "xo": "^0.24.0"
+        "pkg": "^4.4.0",
+        "xo": "^0.24.0"
     }
-  }
+}
