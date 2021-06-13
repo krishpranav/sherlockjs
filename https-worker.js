@@ -7,6 +7,10 @@ async function test(url, name) {
                 }).catch(error => {
                     reject(error);
                 });
+            } else {
+                if (res.statusCode !== 200) {
+                    resolve(false);
+                }
             }
         })
     })
