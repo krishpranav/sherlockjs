@@ -35,13 +35,15 @@ async function test(url, name) {
 }
 
 process.on('message', msg => {
-    const dis = msg.split(' ');
-    const url = dis[0];
-    const name = dis[1];
+	const dis = msg.split(' ');
+	const url = dis[0];
+	const name = dis[1];
 
-    test(new URL(url), name).then(bool => {
-        process.send(bool);
-    }).catch(error => {
-        process.send(error.message);
-    })
-})
+	test(new URL(url), name).then(bool => {
+		process.send(bool);
+	}).catch(error => {
+		process.send(error.message);
+	}).finally(() => {
+		process.exit(0);
+	});
+});
