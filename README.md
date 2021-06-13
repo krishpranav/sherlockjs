@@ -10,3 +10,6 @@ cd sherlockjs
 npm install
 npm start
 ```
+
+# Example:
+![](https://github.com/krishpranav/sherlockjs/blob/master/gif/example.gif)
