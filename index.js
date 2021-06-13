@@ -12,4 +12,7 @@
         log(chalk.red.bold(`[!] Fatal error: ${err.message || err}`));
         process.exit(1);
     }
+
+    process.on('uncaughtException', errorAndDie);
+    process.on('unhandledRejection', errorAndDie);
 })
